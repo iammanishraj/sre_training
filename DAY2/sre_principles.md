@@ -105,7 +105,7 @@ Data: 50 gigabytes / hour
     **Availability Calculations**
 ![alt text](image-1.png)
 
-## Common incident Metrics
+## Common Incident Management Metrics
 **MTBF: Mean time between failures**  is the average time between repairable failures of a technology product. The metric is used to track both the availability and reliability of a product. The higher the time between failure, the more reliable the system.
 
 The goal for most companies to keep MTBF as high as possible—putting hundreds of thousands of hours (or even millions) between issues.
@@ -128,14 +128,39 @@ This metric extends the responsibility of the team handling the fix to improving
 
 **MTTR: Mean time to respond**  is the average time it takes to recover from a product or system failure from the time when you are first alerted to that failure. This does not include any lag time in your alert system.
 
-For example: If you had four incidents in a 40-hour workweek and spent one total hour on them (from alert to fix), your MTTR for that week would be 15 minutes. 
+**MTTF: Mean time to failure**  is the average time between non-repairable failures of a technology product. 
+The calculation is used to understand how long a system will typically last, determine whether a new version of a system is outperforming the old, and give customers information about expected lifetimes and when to schedule check-ups on their system.
 
-
-To calculate this MTTR, add up the full response time from alert to when the product or service is fully functional again. Then divide by the number of incidents.
-
-For example: If you had four incidents in a 40-hour workweek and spent one total hour on them (from alert to fix), your MTTR for that week would be 15 minutes. 
 
 ## Automation
+Automation is a core principle of SRE, as it reduces manual effort and improves efficiency. SRE teams strive to automate routine tasks such as provisioning infrastructure, deploying software, and responding to incidents.
+
+**Automation Tasks for SREs**
+
+**Infrastructure provisioning** : Automating the setup of servers, networks, and other infrastructure components using tools like Terraform or Ansible. This ensures consistency and reduces manual errors.   
+
+**Deployment and release management:** Automating the process of deploying code changes to production environments using tools like Jenkins or GitLab CI/CD. This enables faster and more frequent releases with reduced risk.   
+
+**Scaling and resource management**: Automating the scaling of resources (e.g., CPU, memory) based on demand to optimize performance and cost. This can be achieved using tools like Kubernetes or AWS Auto Scaling.   
+
+**Incident response:** Automating routine tasks during incidents, such as gathering diagnostic information, running automated checks, and executing predefined remediation steps. This speeds up response times and reduces the impact of outages.   
+
+**Monitoring and alerting:** Automating the collection and analysis of system metrics, and triggering alerts based on predefined thresholds. This enables proactive identification and resolution of issues.   
+
+Capacity planning: Automating the forecasting of future resource needs based on historical data and trends. This helps ensure that systems have sufficient capacity to meet demand.
 ## Monitoring and Alerting
-## Incident Management
-## Proactive Engineering
+Comprehensive monitoring and alerting systems are crucial for detecting and responding to incidents promptly. SRE teams use various tools and techniques to monitor system performance, identify anomalies, and trigger alerts when necessary.
+
+**System metrics:** Monitoring key system metrics such as CPU utilization, memory usage, disk I/O, and network traffic.   
+
+**Application performance metrics:** Monitoring application-specific metrics such as request latency, error rates, and throughput.   
+
+**Log analysis:** Analyzing system and application logs to identify errors, anomalies, and other issues.   
+
+**Synthetic monitoring:** Simulating user interactions to proactively identify and diagnose performance problems.
+
+**Alerting systems:** Configuring alerting systems to notify the appropriate teams of critical issues, such as PagerDuty or Prometheus Alertmanager.
+
+## Collaboration and Communication
+SRE teams collaborate closely with product teams, development teams, and other stakeholders to ensure that systems are reliable, scalable, and aligned with business goals. Effective communication is essential for coordinating efforts and resolving issues.
+
